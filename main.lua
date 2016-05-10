@@ -94,10 +94,13 @@ function game.update()
 			else
 				if game.toClear[i].timer>0 then
 					for _,v in ipairs(game.toClear[i].blocks) do
-						game.matrix[v[2]][v[1]].color[4]=game.toClear[i].alpha
+						for i=1,3 do
+							game.matrixSaved[v[2]][v[1]].color[i]=game.matrixSaved[v[2]][v[1]].color[i]+
+							(128-game.matrixSaved[v[2]][v[1]].color[i])*0.1
+						end
 					end
 				else
-					game.removeBlocks(game.toClear[i].blocks)
+					--game.removeBlocks(game.toClear[i].blocks)
 					table.remove(game.toClear, i)
 				end
 			end
