@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"frag",
+				"frags"
+			],
+			[
+				"for",
+				"fori	for i,v in ipairs()"
+			],
+			[
+				"updat",
+				"update"
+			],
+			[
+				"obj",
+				"objectSetMatrix"
+			],
+			[
+				"matrix",
+				"matrixHeight"
+			],
+			[
+				"random",
+				"love.math.random"
+			],
+			[
+				"print",
+				"love.graphics.print"
+			],
+			[
+				"q",
+				"love.event.quit"
+			],
+			[
 				"tab",
 				"table.insert	(table, [pos,] value)"
 			],
@@ -22,10 +54,6 @@
 			[
 				"ra",
 				"love.math.random"
-			],
-			[
-				"matrix",
-				"matrixWidth"
 			],
 			[
 				"matrixSa",
@@ -64,10 +92,6 @@
 				"currentDay"
 			],
 			[
-				"for",
-				"fori	for i,v in ipairs()"
-			],
-			[
 				"setb",
 				"love.graphics.setBlendMode"
 			],
@@ -78,10 +102,6 @@
 			[
 				"string",
 				"string.format	(formatstring, ...)"
-			],
-			[
-				"print",
-				"love.graphics.printf"
 			],
 			[
 				"newf",
@@ -270,10 +290,6 @@
 			[
 				"camer",
 				"camera"
-			],
-			[
-				"random",
-				"love.math.setRandomSeed"
 			],
 			[
 				"mat",
@@ -498,51 +514,33 @@
 			[
 				"upperT",
 				"upperTurnOver"
-			],
-			[
-				"mouse",
-				"love.mouse.getPosition"
-			],
-			[
-				"refill",
-				"refillCard"
-			],
-			[
-				"rado",
-				"love.math.random"
-			],
-			[
-				"push",
-				"love.graphics.push"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "main.lua",
+			"file": "frag.lua",
 			"settings":
 			{
-				"buffer_size": 10052,
-				"line_ending": "Windows",
-				"name": "main.lua"
-			}
-		},
-		{
-			"file": "/F/Love2D Project/box2d/editor/editor.lua",
-			"settings":
-			{
-				"buffer_size": 14247,
+				"buffer_size": 2264,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "grid.lua",
+			"file": "main.lua",
 			"settings":
 			{
-				"buffer_size": 302,
-				"line_ending": "Windows",
-				"name": "return"
+				"buffer_size": 14637,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Alexar/Desktop/love编译工具/compile.lua",
+			"settings":
+			{
+				"buffer_size": 3069,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -646,6 +644,14 @@
 	],
 	"file_history":
 	[
+		"/F/Love2D Project/tower defence/lib/tween.lua",
+		"/F/Love2D Project/box2d/libs/camera.lua",
+		"/F/Love2D Project/tower defence/lib/util.lua",
+		"/F/Love2D Project/tetris/grid.lua",
+		"/F/Love2D Project/tetris/bloom.lua",
+		"/C/Users/Alexar/Desktop/test_compile/main.lua",
+		"/F/Love2D Project/tower defence/frag.lua",
+		"/F/Love2D Project/tetris/main.lua",
 		"/F/Love2D Project/box2d/editor/editor.lua",
 		"/F/Love2D Project/fight/conf.lua",
 		"/F/Love2D Project/fluid/main.lua",
@@ -765,15 +771,7 @@
 		"/F/Love2D Project/pixelRace/main.lua",
 		"/F/Love2D Project/pixelRace/scenes/game.lua",
 		"/F/Love3d/love3d/assets/models/skydome.iqe",
-		"/F/Love2D Project/pixelRace/rules.lua",
-		"/F/Love2D Project/pixelRace/objs/item.lua",
-		"/F/Love2D Project/pixelRace/objs/car.lua",
-		"/F/Love2D Project/pixelRace/gameCtrl.lua",
-		"/F/Love2D Project/pixelRace/objs/tires.lua",
-		"/F/Love2D Project/pixelRace/scenes/intro.lua",
-		"/F/Love2D Project/pixelRace/scenes/data.lua",
-		"/F/Love2D Project/pixelRace/scenes/quit.lua",
-		"/F/Love2D Project/pixelRace/scenes/config.lua"
+		"/F/Love2D Project/pixelRace/rules.lua"
 	],
 	"find":
 	{
@@ -792,6 +790,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"frag",
+			"self",
+			"math.",
+			"score",
+			"matrixClear",
+			"removelin",
+			"matrixsave()",
+			"matrixsave",
+			"print",
+			"update",
+			"falling",
+			"create",
+			"game.timer",
+			"create",
 			"line2Clear",
 			"inrect",
 			"object",
@@ -905,21 +917,7 @@
 			"lua",
 			"shield",
 			"posinROad",
-			"disk",
-			"item",
-			"exo",
-			"print",
-			"shell.",
-			"reset",
-			"self.body",
-			"addw",
-			"print",
-			"group",
-			"puff",
-			"indexe",
-			"index",
-			"polygon",
-			"trace"
+			"disk"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -927,6 +925,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"new",
 			"toClear",
 			"flower",
 			"weatherIndex",
@@ -1061,97 +1060,96 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.lua",
+					"file": "frag.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10052,
+						"buffer_size": 2264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7663,
-								7663
+								239,
+								239
 							]
 						],
 						"settings":
 						{
-							"auto_name": "main.lua",
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/Lua Love/LuaLove.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 7691.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/F/Love2D Project/box2d/editor/editor.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14247,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5345,
-								5362
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
 							"syntax": "Packages/Lua Love/LuaLove.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 3571.0,
+						"translation.x": 0.0,
+						"translation.y": 72.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "grid.lua",
+					"buffer": 1,
+					"file": "main.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 302,
+						"buffer_size": 14637,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								19,
-								19
+								10928,
+								10928
 							]
 						],
 						"settings":
 						{
-							"auto_name": "return",
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Lua Love/LuaLove.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 11036.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Alexar/Desktop/love编译工具/compile.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Lua Love/LuaLove.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1190,7 +1188,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 183.0
+		"height": 154.0
 	},
 	"output.find_results":
 	{

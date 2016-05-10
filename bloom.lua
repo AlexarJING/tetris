@@ -7,7 +7,8 @@ local function FindSmallestPO2(num)
 end
 
 local function ScaleToPO2(xsize, ysize)
-   return FindSmallestPO2(xsize), FindSmallestPO2(ysize)
+   --return FindSmallestPO2(xsize), FindSmallestPO2(ysize)
+   return xsize, ysize
 end
 
 -- i've found xsize and ysize of 1/2 - 1/4 the screen resolution to be nice
@@ -149,6 +150,7 @@ return
 	   local debugdraw = false
 	   
 	   function bloom:refresh(xs, ys)
+
 	      xs, ys = math.floor(xs+0.5), math.floor(ys+0.5)
 	      
 	      local renderingtoscene = false
