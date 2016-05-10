@@ -531,15 +531,7 @@
 			"file": "main.lua",
 			"settings":
 			{
-				"buffer_size": 14637,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Alexar/Desktop/love编译工具/compile.lua",
-			"settings":
-			{
-				"buffer_size": 3069,
+				"buffer_size": 15705,
 				"line_ending": "Windows"
 			}
 		}
@@ -644,6 +636,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Alexar/Desktop/love编译工具/compile.lua",
 		"/F/Love2D Project/tower defence/lib/tween.lua",
 		"/F/Love2D Project/box2d/libs/camera.lua",
 		"/F/Love2D Project/tower defence/lib/util.lua",
@@ -770,8 +763,7 @@
 		"/F/Love2D Project/pixelRace/scenes/start.lua",
 		"/F/Love2D Project/pixelRace/main.lua",
 		"/F/Love2D Project/pixelRace/scenes/game.lua",
-		"/F/Love3d/love3d/assets/models/skydome.iqe",
-		"/F/Love2D Project/pixelRace/rules.lua"
+		"/F/Love3d/love3d/assets/models/skydome.iqe"
 	],
 	"find":
 	{
@@ -1060,7 +1052,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1087,10 +1079,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 72.0,
+						"translation.y": 1332.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1099,15 +1091,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14637,
+						"buffer_size": 15705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10928,
-								10928
+								14868,
+								14868
 							]
 						],
 						"settings":
@@ -1117,36 +1109,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11036.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Alexar/Desktop/love编译工具/compile.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Lua Love/LuaLove.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 15809.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

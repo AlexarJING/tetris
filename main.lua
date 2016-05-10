@@ -575,58 +575,68 @@ function game.objectCollideTest(obj)
 	return 0 --hit nothing
 end
 
+function game.moveleft()
+	game.matrixClear()
+	game.obj.x=game.obj.x-1
+	if game.objectCollideTest(game.obj) ~=0 then
+		game.obj.x=game.obj.x+1
+	end
+	game.objectSetMatrix(game.obj)
+end
+
+function game.moveright()
+	game.matrixClear()
+	game.obj.x=game.obj.x+1
+	if game.objectCollideTest(game.obj) ~=0 then
+		game.obj.x=game.obj.x-1
+	end
+	game.objectSetMatrix(game.obj)
+end
+
+function game.transform()
+	game.matrixClear()
+	game.objectTurn(game.obj)
+	local test=game.objectCollideTest(game.obj)
+	if  test>0 then
+		game.objectTurn(game.obj,true)
+	elseif test<0 then
+		repeat
+			game.obj.x=game.obj.x-1
+		until game.objectCollideTest(game.obj)==0
+		
+	end
+	game.objectSetMatrix(game.obj)
+end
+
+function game.fall()
+	game.falling = true
+end
+
+function game.togglePause()
+	game.pause=not game.pause
+end
 
 function love.keypressed(key)
 
 	if key=="w" then
-		game.matrixClear()
-		game.objectTurn(game.obj)
-		local test=game.objectCollideTest(game.obj)
-		if  test>0 then
-			game.objectTurn(game.obj,true)
-		elseif test<0 then
-			repeat
-				game.obj.x=game.obj.x-1
-			until game.objectCollideTest(game.obj)==0
-			
-		end
-		game.objectSetMatrix(game.obj)
+		game.transform()
 	end
 
-	if key=="e" then
-		game.matrixClear()
-		game.objectTurn(game.obj,true)
-		if game.objectCollideTest(game.obj) ~=0 then
-			--game.matrixClear()
-			game.objectTurn(game.obj,true)
-		end
-		game.objectSetMatrix(game.obj)
-	end
 
 	if key=="a" then
-		game.matrixClear()
-		game.obj.x=game.obj.x-1
-		if game.objectCollideTest(game.obj) ~=0 then
-			game.obj.x=game.obj.x+1
-		end
-		game.objectSetMatrix(game.obj)
+		game.moveleft()	
 	end
 
 	if key=="d" then
-		game.matrixClear()
-		game.obj.x=game.obj.x+1
-		if game.objectCollideTest(game.obj) ~=0 then
-			game.obj.x=game.obj.x-1
-		end
-		game.objectSetMatrix(game.obj)
+		game.moveright()	
 	end
 
 	if key=="s" then
-		game.falling = true
+		game.fall()
 	end
 
 	if key=="space" then
-		game.pause=not game.pause
+		game.togglePause()
 	end
 end
 
@@ -645,4 +655,56 @@ end
 
 function love.draw()
 	game.draw()
+end
+
+
+function love.mousepressed(x, y, button, istouch)
+	game.dragOX,game.dragOY=x,y
+	game.dragTimer=love.timer.getTime( )
+end
+
+function love.mousemoved(x,y)
+	if not game.dragOX then return end
+	if love.timer.getTime( )-game.dragTimer<0.3 then return end
+	game.dragTX,game.dragTY=x,y
+	game.dragMX=game.dragMX or game.dragOX
+	game.dragMY=game.dragMY or game.dragOY
+	local dx=game.dragTX-game.dragMX
+	local dy=game.dragTY-game.dragMY
+	local dist= math.sqrt(dx^2+dy^2)
+	if dist>30 then
+		if dx>0 then
+			game.moveright()
+		elseif dx<0 then
+			game.moveleft()
+		end
+		game.dragMX,game.dragMY=x,y
+	end
+
+end
+
+function love.mousereleased(x,y)
+	game.dragTX,game.dragTY=x,y
+	local dx=game.dragTX-game.dragOX
+	local dy=game.dragTY-game.dragOY
+	local dist= math.sqrt(dx^2+dy^2)
+	
+		if dy>100 and math.abs(dx)<50 then
+			game.fall()
+		end
+		if dy<-100 and math.abs(dx)<50 then
+			game.transform()
+		end
+	
+		if dx>100 and math.abs(dy)<50 then
+			game.moveright()
+		end
+
+		if dx<-100 and math.abs(dy)<50 then
+			game.moveleft()
+		end
+
+	game.dragOX=nil
+	game.dragMX=nil
+	game.dragMY=nil
 end
